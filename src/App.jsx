@@ -31,10 +31,10 @@ function App() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="inline-flex items-center space-x-2 bg-yellow-900/30 border border-yellow-500/30 rounded-full px-4 py-2 mb-6"
+            className="inline-flex items-center space-x-2 bg-purple-900/30 border border-purple-500/30 rounded-full px-4 py-2 mb-6"
           >
-            <AlertCircle size={16} className="text-yellow-400" />
-            <span className="text-sm text-gray-300">v3.0.0 - Initial Release (Beta)</span>
+            <Info size={16} className="text-purple-400" />
+            <span className="text-sm text-gray-300">CulturaBuilder v3 🚀 - Framework Estável</span>
           </motion.div>
 
           {/* Main Description */}
@@ -266,6 +266,52 @@ function App() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Migration Warning Section */}
+      <section className="py-16 px-4 bg-yellow-900/10 border-y border-yellow-500/20">
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center"
+          >
+            <div className="inline-flex items-center space-x-2 bg-yellow-900/30 border border-yellow-500/30 rounded-full px-4 py-2 mb-6">
+              <AlertCircle size={16} className="text-yellow-400" />
+              <span className="text-sm text-gray-300">⚠️ Importante para Usuários v2</span>
+            </div>
+            
+            <h2 className="text-3xl font-bold mb-4 text-yellow-400">Migrando do CulturaBuilder v2?</h2>
+            <div className="bg-gray-900/50 border border-yellow-500/20 rounded-lg p-6 text-left">
+              <h3 className="text-lg font-semibold mb-4 text-yellow-400">🔄 Mudança Importante no Comando /build</h3>
+              <div className="space-y-3 text-gray-300">
+                <div className="flex items-center space-x-2">
+                  <span className="text-red-400">❌ v2:</span>
+                  <code className="bg-gray-800 px-2 py-1 rounded text-sm">/build myFeature</code>
+                  <span className="text-gray-400">→ implementação de features</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <span className="text-green-400">✅ v3:</span>
+                  <code className="bg-gray-800 px-2 py-1 rounded text-sm">/cb:implement myFeature</code>
+                  <span className="text-gray-400">→ implementação de features</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <span className="text-blue-400">🆕 v3:</span>
+                  <code className="bg-gray-800 px-2 py-1 rounded text-sm">/cb:build</code>
+                  <span className="text-gray-400">→ compilação/packaging apenas</span>
+                </div>
+              </div>
+              <div className="mt-4 p-4 bg-yellow-900/20 border border-yellow-500/30 rounded">
+                <p className="text-sm text-gray-300">
+                  <strong>Limpeza necessária:</strong> Desinstale v2 e remova arquivos antigos antes de instalar v3 
+                  para evitar conflitos de estrutura.
+                </p>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 

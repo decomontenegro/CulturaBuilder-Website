@@ -118,19 +118,43 @@ const InstallationSection = () => {
 
         {/* Opções de Instalação */}
         <div className="bg-gray-800/30 border border-gray-700 rounded-lg p-6 mb-8">
-          <h3 className="text-xl font-semibold mb-4 text-white">Opções de Instalação</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="bg-gray-900/50 rounded-lg p-4">
-              <h4 className="font-medium text-purple-400 mb-2">Quick Setup (Recomendado)</h4>
-              <code className="text-sm text-gray-300">python3 -m CulturaBuilder install</code>
+          <h3 className="text-xl font-semibold mb-4 text-white">Opções de Instalação Modernizadas</h3>
+          
+          {/* Instalação do Pacote */}
+          <div className="mb-6">
+            <h4 className="font-medium text-purple-400 mb-3">📦 Instalação do Pacote</h4>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="bg-gray-900/50 rounded-lg p-4">
+                <h5 className="font-medium text-green-400 mb-2">PyPI (Recomendado)</h5>
+                <code className="text-sm text-gray-300">pip install CulturaBuilder</code>
+              </div>
+              <div className="bg-gray-900/50 rounded-lg p-4">
+                <h5 className="font-medium text-blue-400 mb-2">UV (Moderno)</h5>
+                <code className="text-sm text-gray-300">uv add CulturaBuilder</code>
+              </div>
+              <div className="bg-gray-900/50 rounded-lg p-4">
+                <h5 className="font-medium text-cyan-400 mb-2">UVX (Cross-platform)</h5>
+                <code className="text-sm text-gray-300">uvx pip install CulturaBuilder</code>
+              </div>
             </div>
-            <div className="bg-gray-900/50 rounded-lg p-4">
-              <h4 className="font-medium text-purple-400 mb-2">Instalação Mínima</h4>
-              <code className="text-sm text-gray-300">python3 -m CulturaBuilder install --minimal</code>
-            </div>
-            <div className="bg-gray-900/50 rounded-lg p-4">
-              <h4 className="font-medium text-purple-400 mb-2">Setup Desenvolvedor</h4>
-              <code className="text-sm text-gray-300">python3 -m CulturaBuilder install --profile developer</code>
+          </div>
+
+          {/* Configuração */}
+          <div>
+            <h4 className="font-medium text-purple-400 mb-3">⚙️ Configuração</h4>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="bg-gray-900/50 rounded-lg p-4">
+                <h5 className="font-medium text-green-400 mb-2">Quick Setup (Recomendado)</h5>
+                <code className="text-sm text-gray-300">python3 -m CulturaBuilder install</code>
+              </div>
+              <div className="bg-gray-900/50 rounded-lg p-4">
+                <h5 className="font-medium text-yellow-400 mb-2">Instalação Interativa</h5>
+                <code className="text-sm text-gray-300">CulturaBuilder install --interactive</code>
+              </div>
+              <div className="bg-gray-900/50 rounded-lg p-4">
+                <h5 className="font-medium text-purple-400 mb-2">Setup Desenvolvedor</h5>
+                <code className="text-sm text-gray-300">CulturaBuilder install --profile developer</code>
+              </div>
             </div>
           </div>
         </div>
